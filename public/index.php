@@ -117,8 +117,77 @@ echo proverka();
 echo '<br>'.'<br>';
 
 
+$myClass = new User();
+$myClass->setName('Vlad');
+echo $myClass->getName();
+
+$isWork = User::checkClass();
+
+$admin = new Admin('va', '123');
 
 
+class Admin extends User
+{
+    public function __construct($name, $email)
+    {
+        parent::__construct($name, $email);
+    }
+}
+
+class User
+{
+    // $this - системная
+    //свойства
+    //методы
+    // публичные, приватные, защищенные
+
+    public function __construct($name = null, $email = null)
+    {
+        $this->name = $name;
+        $this->email = $email;
+    }
+
+    //свойства
+    private $name;
+    protected $email;
+
+    protected static $test = [];
+
+    //Метод
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    //Метод
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    public static function checkClass()
+    {
+        $a = self::$test;
+        return true;
+    }
+
+    public static function checkClass1()
+    {
+
+        return true;
+    }
+}
+
+
+//for ($i = 0; $i < 10; $i++);
+//$foreach($age as $key => $item)
+//while($i < 10){//}
+//do {} while($i < 1)
 
 
 
