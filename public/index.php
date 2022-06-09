@@ -40,7 +40,7 @@ echo $int.$string4.'<br>';
 echo $int + $string4.'<br>';
 // =============
 
-$sum = sum(1, 3);
+$sum = sum(3, 3);
 echo $sum.'<br>';
 
 function sum($a, $b)
@@ -85,3 +85,40 @@ if ($int1 === $int2) { //сравнение по типу
 } else {
     echo 'not equ';
 }
+echo '<br>'.'<br>';
+//==========================задача4
+
+function makesqr($num) {
+    echo sqrt($num);
+    echo '<br>';
+}
+
+echo makesqr(49);
+echo makesqr(64);
+echo makesqr(81);
+
+
+
+echo '<br>'.'<br>';
+
+//==========================задача5
+ function proverka($age = " ") {
+     if ($age < 18) {
+         echo 'Вам не доступен данный контент';
+     }else
+     {
+         echo ' ';
+     }
+     echo '<br>';
+ }
+ echo proverka(14);
+echo proverka();
+
+echo '<br>'.'<br>';
+
+
+
+
+
+
+
